@@ -109,7 +109,7 @@ async function getRecipes() {
     //            we have provided. Then, pass the recipes array to the Promise's
     //            resolve() method.
         if (i == RECIPE_URLS.length - 1) {
-          localStorage.setItem('recipes', recipes);
+          localStorage.setItem('recipes', JSON.stringify(recipes));
           resolve(recipes);
         }
     // A10. TODO - Log any errors from catch using console.error
